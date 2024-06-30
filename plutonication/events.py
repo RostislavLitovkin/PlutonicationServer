@@ -117,6 +117,16 @@ def sign_payload(data):
     emit("sign_payload", data["Data"], to=room)
 
 
+@socketio.on("update")
+@limit_socketio()
+def update(data):
+    """
+    Event handler used by dApps. Receive an update for the extrinsic signed by a `signer.sign`
+    """
+    room = data["Room"]
+    emit("update", data["Data"], to=room)
+
+
 @socketio.on("sign_raw")
 @limit_socketio()
 def sign_raw(data):
@@ -127,7 +137,6 @@ def sign_raw(data):
     """
     room = data["Room"]
     emit("sign_raw", data["Data"], to=room)
-
 
 @socketio.on("payload_signature")
 @limit_socketio()
