@@ -83,6 +83,9 @@
                 <li class="scroll-to-link" data-target="content-on-payload-signature">
                     <a>On <code class="higlighted break-word">payload_signature</code></a>
                 </li>
+                <li class="scroll-to-link" data-target="content-on-update">
+                    <a>On <code class="higlighted break-word">update</code></a>
+                </li>
                 <li class="scroll-to-link" data-target="content-on-payload-signature-rejected">
                     <a>On <code class="higlighted break-word">payload_signature_rejected</code></a>
                 </li>
@@ -123,14 +126,14 @@
 import io from 'socket.io-client';
 
 // Change the URL, if you want to use your own endpoint.
-const socket = io("wss://plutonication-acnha.ondigitalocean.app/");
+const socket = io("wss://plutonication.com/");
                  </code></pre>
                 <p>
                     Plutonication uses <a href="https://socket.io/">Socket.IO</a>.
                 </p>
                 <p>
                     To connect your to PlutonicationServer, just connect to
-                    <code class="higlighted break-word">wss://plutonication-acnha.ondigitalocean.app/</code>
+                    <code class="higlighted break-word">wss://plutonication.com/</code>
                     .
                 </p>
                 <p>
@@ -285,6 +288,19 @@ socket.on("payload_signature", (data /* SignerResult type */) => {
                 </pre>
                 <p>
                     Event handler used by wallet, when wallet decides to sign given payload.
+                </p>
+            </div>
+            <div class="overflow-hidden content-section" id="content-on-update">
+                <h2>On update</h2>
+                <pre>
+                    <code class="js">
+socket.on("update", (id: number, status: H256 | ISubmittableResult) => {
+    // Handle the update logic
+})
+                    </code>
+                </pre>
+                <p>
+                    Receives an update for the extrinsic signed by a <code class="higlighted break-word">signer.sign</code>
                 </p>
             </div>
             <div class="overflow-hidden content-section" id="content-on-payload-signature-rejected">

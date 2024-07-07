@@ -8,7 +8,7 @@ Passes payloads between Wallets and dApps.
 
 # Low-level docs
 
-In case you were interested in making your own Plutonication clients, consider reading these docs: https://plutonication-acnha.ondigitalocean.app/docs.
+In case you were interested in making your own Plutonication clients, consider reading these docs: https://plutonication.com/docs.
 
 # In code docs
 

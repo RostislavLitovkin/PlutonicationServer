@@ -6,7 +6,7 @@ let walletSocket
 let thirdSocket
 
 
-// You might want to change this to wss://plutonication-acnha.ondigitalocean.app/
+// You might want to change this to wss://plutonication.com/
 // or other URL, if you want to use your own endpoint.
 const endpointUrl = "ws://127.0.0.1:8000"
 
