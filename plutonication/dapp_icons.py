@@ -12,7 +12,7 @@ def mimir_icon():
     return send_file("static/dapp_icons/mimir.png", mimetype="image/png")
 
 
-@app.route("/dapp/astar")
+@app.route("/dapp/astar-icon")
 def astar_icon():
     return send_file("static/dapp_icons/astar.png", mimetype="image/png")
 
