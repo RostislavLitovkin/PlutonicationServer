@@ -16,3 +16,8 @@ def mimir_icon():
 def astar_icon():
     return send_file("static/dapp_icons/astar.png", mimetype="image/png")
 
+
+@app.route("/dapp/interlay-icon")
+def interlay_icon():
+    return send_file("static/dapp_icons/interlay.png", mimetype="image/png")
+
