@@ -47,6 +47,29 @@ def get_plutowallet_latest_version():
         "version": 15,
     }
 
+# Pluto wallet part
+@app.route("/uniqueryplus/featured-nfts")
+def get_uniquery_plus_featured_nfts():
+    return [{
+        "nftType": "PolkadotAssetHub_NftsPallet",
+        "collectionId": 208,
+        "id": 1,
+    },
+    {
+        "nftType": "PolkadotAssetHub_NftsPallet",
+        "collectionId": 258,
+        "id": 4230904976,
+    },
+    {
+        "nftType": "Mythos",
+        "collectionId": 86219270927352332455509372315086258213278212512,
+        "id": 101,
+    },{
+        "nftType": "Unique",
+        "collectionId": 304,
+        "id": 1,
+    }]
+
 
 # Galaxy Logic Game part
 @app.route("/glg/validate-game", methods=["POST"])
