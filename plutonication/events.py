@@ -113,6 +113,7 @@ def sign_payload(data):
 
     You can expect the wallet to emit either "payload_signature" event or "payload_signature_rejected" event.
     """
+    print(data["Data"])
     room = data["Room"]
     emit("sign_payload", data["Data"], to=room)
 
