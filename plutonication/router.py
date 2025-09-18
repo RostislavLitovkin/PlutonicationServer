@@ -124,7 +124,7 @@ def get_supported_wallets():
     return [
         {
             "name": "PlutoWallet",
-            "icon": "https://rostislavlitovkin.pythonanywhere.com/plutowalleticonwhite",
+            "icon": "https://plutonication.com/wallets/plutowalletwhite",
             "downloadAndroid": "https://play.google.com/store/apps/details?id=com.rostislavlitovkin.plutowallet",
             "downloadIOS": None,
             "github": "https://github.com/rostislavLitovkin/plutowallet",
